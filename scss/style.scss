@@ -1,0 +1,155 @@
+@import 'variables';
+@import 'utilities';
+@import 'feature';
+
+body{
+    background:white;
+    color: $main-color;
+    font-size:12px;
+    font-family: $main-font;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration:none;
+    color: $main-color;
+}
+
+li{
+    list-style: none;
+}
+img{
+    max-width:100%;
+}
+
+nav{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo{
+        width:30%;
+    }
+}
+
+.hero{
+    text-align:center;
+
+    img{
+        width:100%;
+    }
+}
+
+.record-card{
+    &-logo{
+        width:30px;
+    }
+}
+
+.features{
+    text-align: center;
+
+    
+    .feature:nth-child(1){
+        background: $main-light;
+        position:relative;
+        @include FEATUREBG(1);
+
+    }
+    .feature:nth-child(2){
+        margin-top:100px;
+        margin-bottom:100px;
+        
+    }
+    .feature:nth-child(3){
+        background: $main-light;
+        @include FEATUREBG(2);
+        position:relative;
+    }
+}
+
+.call-for-action{
+    text-align: center;
+    margin-bottom:8rem;
+
+}
+
+.newsletter-subscription{
+    position:relative;
+    background: $main-color;
+    color:white;
+    
+
+    &:before{
+        position:absolute;
+        content: "";
+        width:100%;
+        height:100%;
+        top:-50px;
+        left:0;
+        background: url('../images/bg-footer-top-mobile.svg') no-repeat top;
+    }
+
+    input{
+        height:40px;
+        border-radius: 5px;
+        border:none;
+        outline:none;
+        width:100%;
+        margin-top:1rem;
+        margin-bottom:1rem;
+    }
+    .btn-subscribe{
+        text-align:center;
+        padding: 0.6rem;
+        height:45px;
+        width: 150px;
+        background: $primary-color;
+        border-radius: 5px;
+        margin-right:0;
+        margin-left:auto;
+        font-size:1rem;
+        text-transform: bold;
+
+    }
+}
+
+footer{
+    background: $main-color;
+    color:white;
+    font-size:1rem;
+
+    .logo{
+        width: 60%;
+        max-width: 240px;
+    }
+
+    table{
+        i{
+            margin-right:1.5rem;
+        }
+        tr{
+            margin:1rem 0;
+        }
+    }
+
+    .social-media{
+        display:flex;
+        justify-content: space-between;
+        width:35%;
+        max-width:100px;
+
+        a{
+            font-size:1.5rem;
+            color:white;
+        }
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: white; }

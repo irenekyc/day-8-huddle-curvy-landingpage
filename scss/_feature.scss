@@ -1,0 +1,24 @@
+@mixin FEATUREBG($i){
+    &:before{
+
+        position:absolute;
+        content: "";
+        top:-100px;
+        height:100px;
+        left:0;
+        width:100%;
+        background: url('../images/bg-section-top-mobile-#{$i}.svg') no-repeat top;
+        
+    }
+    &:after{
+        position:absolute;
+        content: "";
+        bottom:-100px;
+        height:100px;
+        left:0;
+        width:100%;
+        background: url('../images/bg-section-bottom-mobile-#{$i}.svg') no-repeat top;
+        
+    }
+}
+

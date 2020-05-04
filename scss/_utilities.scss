@@ -1,0 +1,95 @@
+.wrapper{
+    padding: 0 4%;
+}
+
+.wrapper-narrow{
+    padding: 0 8%;
+}
+
+.flex-box{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 766px){
+        flex-direction: column;
+    }
+}
+
+@for $i from 1 through 5{
+    .py-#{$i}{ padding: 1rem*$i 0;}
+}
+@for $i from 1 through 5{
+    .p-#{$i}{ padding: 1rem*$i;}
+}
+@for $i from 1 through 5{
+    .my-#{$i}{ margin: 1rem*$i 0;}
+}
+
+@for $i from 1 through 5{
+    .mt-#{$i}{ margin-top: 1rem*$i 0;}
+}
+
+@mixin ALIGNCENTER{
+    margin-right:auto;
+    margin-left:auto;
+}
+
+@mixin ALIGNLEFT{
+    margin-left:0;
+}
+@mixin ALIGNRIGHT{
+    margin-right:0;
+}
+
+
+//TEXT
+.heading-text{
+    font-family: $heading-font;
+}
+.large{
+    font-size:1.6rem;
+}
+
+.x-large{
+    font-size:3rem;
+}
+
+.lh-2{
+    line-height:1.6;
+}
+.secondary{
+    color: #cccccc;
+}
+
+.align-center{
+    text-align:center;
+}
+
+
+//BUTTON
+
+.btn{
+    padding: 0.2rem 1.25rem;
+    border-radius: 1rem;
+    cursor: pointer;
+
+    &.btn-white{
+        background:white;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+        // box-shadow: 0.2px 0.2px 0 $primary-color;
+    }
+
+    &.btn-primary{
+        background: $primary-color;
+        color:white;
+    }
+
+    &.btn-large{
+        padding:0.5rem 1.5rem;
+        width:80%;
+        max-width:270px;
+        @include ALIGNCENTER;
+        box-shadow: 1px 2px 5px rgba(0,0,0,0.08);
+    }
+}
