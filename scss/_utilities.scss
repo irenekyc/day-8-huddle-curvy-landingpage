@@ -64,6 +64,11 @@
 .align-center{
     text-align:center;
 }
+.lead{
+    width:70%;
+    max-width:610px;
+    @include ALIGNCENTER;
+}
 
 
 //BUTTON

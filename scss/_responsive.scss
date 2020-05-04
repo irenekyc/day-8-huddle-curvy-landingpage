@@ -1,0 +1,31 @@
+@media (min-width:767px){
+    .record{
+        width:70%;
+        max-width:840px;
+        @include ALIGNCENTER;
+    }
+    .large{
+        font-size:2rem;
+    }
+    .x-large{
+        font-size:3rem;
+    }
+}
+
+@media (min-width:1023px){
+    body{
+        font-size:18px;
+    }
+    .large{
+        font-size:2.5rem;
+    }
+    .x-large{
+        font-size:4rem;
+    }
+
+    .footer{
+        display:flex;
+        justify-content: space-between;
+        flex-direction:row-reverse;
+    }
+}

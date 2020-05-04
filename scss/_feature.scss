@@ -7,18 +7,60 @@
         height:100px;
         left:0;
         width:100%;
-        background: url('../images/bg-section-top-mobile-#{$i}.svg') no-repeat top;
+        @media (max-width:766px){
+            background: url('../images/bg-section-top-mobile-#{$i}.svg') repeat top;
+        }
+        @media (min-width:767px){
+            background: url('../images/bg-section-top-desktop-#{$i}.svg') no-repeat top;
+        }
+        
         
     }
     &:after{
         position:absolute;
         content: "";
-        bottom:-100px;
-        height:100px;
+        bottom:-50px;
+        height:50px;
         left:0;
         width:100%;
-        background: url('../images/bg-section-bottom-mobile-#{$i}.svg') no-repeat top;
+        @media (max-width: 766px){
+            background: url('../images/bg-section-bottom-mobile-#{$i}.svg') repeat top;
+        }
+        @media (min-width: 767px){
+            height:100px;
+            bottom:-75px;
+            background: url('../images/bg-section-bottom-desktop-#{$i}.svg') no-repeat top;
+        }
+        
         
     }
 }
 
+@mixin FEATUREFLEX{
+    @media (min-width:767px){
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width:55%;
+        }
+        >div{
+            padding: 1rem;
+            text-align:left;
+        }
+        &:nth-child(even){
+            flex-direction: row-reverse;
+        }
+    }
+    
+
+    @media (min-width: 1023px){
+        img{
+            width:60%;
+        }
+        >div{
+            padding: 2rem;
+            text-align:left;
+        }
+    }
+}
